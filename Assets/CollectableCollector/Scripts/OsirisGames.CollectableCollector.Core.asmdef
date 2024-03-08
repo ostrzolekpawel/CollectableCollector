@@ -1,5 +1,5 @@
 {
-    "name": "CollectableCollector.Core",
+    "name": "OsirisGames.CollectableCollector.Core",
     "rootNamespace": "",
     "references": [
         "UniTask"
