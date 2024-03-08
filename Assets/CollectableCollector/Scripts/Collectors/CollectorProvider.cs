@@ -21,11 +21,11 @@ namespace OsirisGames.CollectableCollector
             _map.Add(type, collector);
         }
 
-        public void Collect(TType type, TData reward, TView view)
+        public void Collect(TType type, TData data, TView view)
         {
             if (_map.ContainsKey(type))
             {
-                _map[type].Collect(reward, view);
+                _map[type].Collect(data, view);
                 return;
             }
 

@@ -2,6 +2,6 @@
 {
     public interface ICollector<in TData, in TView>
     {
-        void Collect(TData reward, TView view);
+        void Collect(TData data, TView view);
     }
 }
