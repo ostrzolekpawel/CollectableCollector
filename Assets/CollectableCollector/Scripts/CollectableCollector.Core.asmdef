@@ -1,7 +1,9 @@
 {
     "name": "CollectableCollector.Core",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "UniTask"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
