@@ -29,7 +29,7 @@ namespace OsirisGames.CollectableCollector
                 return _map[type].GetViewData(data);
             }
 
-            throw new InvalidOperationException($"No provider found for reward type: {type}");
+            throw new InvalidOperationException($"No provider found for type: {type}");
         }
     }
 }
