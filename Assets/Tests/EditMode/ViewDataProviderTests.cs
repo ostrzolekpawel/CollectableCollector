@@ -17,10 +17,10 @@ namespace OsirisGames.CollectableCollector.Tests
             provider.Object.Add(type, viewDataMock.Object);
 
             // Act
-            provider.Object.GetViewData(type, data);
+            provider.Object.GetViewDataAsync(type, data);
 
             // Assert
-            viewDataMock.Verify(collector => collector.GetViewData(data), Times.Once);
+            viewDataMock.Verify(collector => collector.GetViewDataAsync(data), Times.Once);
         }
 
         [Test]

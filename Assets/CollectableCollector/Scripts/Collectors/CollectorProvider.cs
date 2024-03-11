@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 
 namespace OsirisGames.CollectableCollector
@@ -27,6 +28,16 @@ namespace OsirisGames.CollectableCollector
             {
                 _map[type].Collect(data, view);
                 return;
+            }
+
+            throw new InvalidOperationException($"No provider found for type: {type}");
+        }
+
+        public async UniTask CollectAsync(TType type, TData data, TView view)
+        {
+            if (_map.ContainsKey(type))
+            {
+                await _map[type].CollectAsync(data, view);
             }
 
             throw new InvalidOperationException($"No provider found for type: {type}");

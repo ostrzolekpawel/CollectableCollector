@@ -22,11 +22,21 @@ namespace OsirisGames.CollectableCollector
             _map.Add(type, viewData);
         }
 
-        public UniTask<TView> GetViewData(TType type, TData data)
+        public void GetViewData(TType type, TData data)
         {
             if (_map.ContainsKey(type))
             {
-                return _map[type].GetViewData(data);
+                _map[type].GetViewData(data);
+            }
+
+            throw new InvalidOperationException($"No provider found for type: {type}");
+        }
+
+        public async UniTask<TView> GetViewDataAsync(TType type, TData data)
+        {
+            if (_map.ContainsKey(type))
+            {
+                return await _map[type].GetViewDataAsync(data);
             }
 
             throw new InvalidOperationException($"No provider found for type: {type}");
