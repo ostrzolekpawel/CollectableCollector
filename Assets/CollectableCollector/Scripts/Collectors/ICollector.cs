@@ -2,9 +2,9 @@
 
 namespace OsirisGames.CollectableCollector
 {
-    public interface ICollector<in TData, in TView>
+    public interface ICollector<in TData, in TArgs>
     {
-        void Collect(TData data, TView view);
-        UniTask CollectAsync(TData data, TView view);
+        void Collect(TData data, TArgs args);
+        UniTask CollectAsync(TData data, TArgs args);
     }
 }

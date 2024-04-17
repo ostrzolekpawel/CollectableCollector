@@ -7,11 +7,11 @@ namespace OsirisGames.CollectableCollector
     /// </summary>
     /// <typeparam name="TType">type of data</typeparam>
     /// <typeparam name="TData">data</typeparam>
-    /// <typeparam name="TView">view which will provided further for animation purposes or other</typeparam>
-    public interface ICollectorProvider<in TType, TData, TView>
+    /// <typeparam name="TArgs">Additional information for collecting, e.g. animations etcr</typeparam>
+    public interface ICollectorProvider<in TType, TData, TArgs>
     {
-        void Add(TType type, ICollector<TData, TView> collector);
-        void Collect(TType type, TData reward, TView view);
-        UniTask CollectAsync(TType type, TData reward, TView view);
+        void Add(TType type, ICollector<TData, TArgs> collector);
+        void Collect(TType type, TData reward, TArgs args);
+        UniTask CollectAsync(TType type, TData reward, TArgs args);
     }
 }

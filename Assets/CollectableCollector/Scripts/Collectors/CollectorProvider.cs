@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 namespace OsirisGames.CollectableCollector
 {
-    public abstract class CollectorProvider<TType, TData, TView> : ICollectorProvider<TType, TData, TView>
+    public abstract class CollectorProvider<TType, TData, TArgs> : ICollectorProvider<TType, TData, TArgs>
     {
-        private readonly Dictionary<TType, ICollector<TData, TView>> _map;
+        private readonly Dictionary<TType, ICollector<TData, TArgs>> _map;
 
         public CollectorProvider()
         {
-            _map = new Dictionary<TType, ICollector<TData, TView>>();
+            _map = new Dictionary<TType, ICollector<TData, TArgs>>();
         }
 
-        public void Add(TType type, ICollector<TData, TView> collector)
+        public void Add(TType type, ICollector<TData, TArgs> collector)
         {
             if (_map.ContainsKey(type))
             {
@@ -22,22 +22,22 @@ namespace OsirisGames.CollectableCollector
             _map.Add(type, collector);
         }
 
-        public void Collect(TType type, TData data, TView view)
+        public void Collect(TType type, TData data, TArgs args)
         {
             if (_map.ContainsKey(type))
             {
-                _map[type].Collect(data, view);
+                _map[type].Collect(data, args);
                 return;
             }
 
             throw new InvalidOperationException($"No provider found for type: {type}");
         }
 
-        public async UniTask CollectAsync(TType type, TData data, TView view)
+        public async UniTask CollectAsync(TType type, TData data, TArgs args)
         {
             if (_map.ContainsKey(type))
             {
-                await _map[type].CollectAsync(data, view);
+                await _map[type].CollectAsync(data, args);
             }
 
             throw new InvalidOperationException($"No provider found for type: {type}");
