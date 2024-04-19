@@ -11,7 +11,7 @@ namespace OsirisGames.CollectableCollector
     public interface ICollectorProvider<in TType, TData, TArgs>
     {
         void Add(TType type, ICollector<TData, TArgs> collector);
-        void Collect(TType type, TData reward, TArgs args);
-        UniTask CollectAsync(TType type, TData reward, TArgs args);
+        void Collect(TType type, TData reward, TArgs args = default);
+        UniTask CollectAsync(TType type, TData reward, TArgs args = default);
     }
 }
