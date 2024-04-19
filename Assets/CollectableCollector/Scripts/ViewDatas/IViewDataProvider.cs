@@ -2,10 +2,10 @@
 
 namespace OsirisGames.CollectableCollector
 {
-    public interface IViewDataProvider<in TType, TData, TView>
+    public interface IViewDataProvider<in TType, TData, TViewData>
     {
-        void Add(TType type, IViewData<TData, TView> viewData);
+        void Add(TType type, IViewData<TData, TViewData> viewData);
         void GetViewData(TType type, TData data);
-        UniTask<TView> GetViewDataAsync(TType type, TData data);
+        UniTask<TViewData> GetViewDataAsync(TType type, TData data);
     }
 }

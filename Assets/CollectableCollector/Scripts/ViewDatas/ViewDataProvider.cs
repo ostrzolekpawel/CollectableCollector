@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 namespace OsirisGames.CollectableCollector
 {
-    public abstract class ViewDataProvider<TType, TData, TView> : IViewDataProvider<TType, TData, TView>
+    public abstract class ViewDataProvider<TType, TData, TViewData> : IViewDataProvider<TType, TData, TViewData>
     {
-        private readonly Dictionary<TType, IViewData<TData, TView>> _map;
+        private readonly Dictionary<TType, IViewData<TData, TViewData>> _map;
 
         public ViewDataProvider()
         {
-            _map = new Dictionary<TType, IViewData<TData, TView>>();
+            _map = new Dictionary<TType, IViewData<TData, TViewData>>();
         }
 
-        public void Add(TType type, IViewData<TData, TView> viewData)
+        public void Add(TType type, IViewData<TData, TViewData> viewData)
         {
             if (_map.ContainsKey(type))
             {
@@ -32,7 +32,7 @@ namespace OsirisGames.CollectableCollector
             throw new InvalidOperationException($"No provider found for type: {type}");
         }
 
-        public async UniTask<TView> GetViewDataAsync(TType type, TData data)
+        public async UniTask<TViewData> GetViewDataAsync(TType type, TData data)
         {
             if (_map.ContainsKey(type))
             {

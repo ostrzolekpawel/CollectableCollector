@@ -4,7 +4,7 @@ namespace OsirisGames.CollectableCollector
 {
     public interface IViewData<in TData, TViewData>
     {
-        void GetViewData(TData data);
+        void GetViewData(TData data); // why it doesn't return view data?
         UniTask<TViewData> GetViewDataAsync(TData data);
     }
 }

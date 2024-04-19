@@ -22,7 +22,7 @@ namespace OsirisGames.CollectableCollector
             _map.Add(type, collector);
         }
 
-        public void Collect(TType type, TData data, TArgs args)
+        public void Collect(TType type, TData data, TArgs args = default)
         {
             if (_map.ContainsKey(type))
             {
@@ -33,7 +33,7 @@ namespace OsirisGames.CollectableCollector
             throw new InvalidOperationException($"No provider found for type: {type}");
         }
 
-        public async UniTask CollectAsync(TType type, TData data, TArgs args)
+        public async UniTask CollectAsync(TType type, TData data, TArgs args = default)
         {
             if (_map.ContainsKey(type))
             {

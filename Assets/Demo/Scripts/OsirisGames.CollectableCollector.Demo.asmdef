@@ -2,7 +2,9 @@
     "name": "OsirisGames.CollectableCollector.Demo",
     "rootNamespace": "",
     "references": [
-        "OsirisGames.CollectableCollector.Core"
+        "OsirisGames.CollectableCollector.Core",
+        "UniTask",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
