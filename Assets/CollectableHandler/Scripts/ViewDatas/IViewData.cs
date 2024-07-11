@@ -1,10 +1,10 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace OsirisGames.CollectableCollector
+namespace OsirisGames.CollectableHandler
 {
     public interface IViewData<in TData, TViewData>
     {
-        void GetViewData(TData data); // why it doesn't return view data?
+        TViewData GetViewData(TData data);
         UniTask<TViewData> GetViewDataAsync(TData data);
     }
 }

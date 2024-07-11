@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OsirisGames.CollectableCollector
+namespace OsirisGames.CollectableHandler
 {
     public abstract class CollectorProvider<TType, TData, TArgs> : ICollectorProvider<TType, TData, TArgs>
     {

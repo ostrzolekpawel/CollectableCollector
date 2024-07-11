@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace OsirisGames.CollectableCollector
+namespace OsirisGames.CollectableHandler
 {
     public interface ICollectorProviderBuilder<TType, TData, TArgs, in TOptions>
     {

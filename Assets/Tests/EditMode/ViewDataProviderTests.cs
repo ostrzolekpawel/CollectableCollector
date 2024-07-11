@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System;
 
-namespace OsirisGames.CollectableCollector.Tests
+namespace OsirisGames.CollectableHandler.Tests
 {
     public class ViewDataProviderTests
     {

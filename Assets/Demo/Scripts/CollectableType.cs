@@ -1,5 +1,5 @@
 using Cysharp.Threading.Tasks;
-using OsirisGames.CollectableCollector;
+using OsirisGames.CollectableHandler;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,7 +47,7 @@ public class CollectableViewData : ICollectableViewData
 public class GoldView : IViewData<Collectable, ICollectableViewData>
 {
     // todo get from somewhere view data for example asset manager or som config
-    public void GetViewData(Collectable data)
+    public ICollectableViewData GetViewData(Collectable data)
     {
         throw new System.NotImplementedException();
     }
