@@ -1,6 +1,31 @@
-# Collectable Collector
+# Collectable Handler
 
 Abstraction layer to handle collect and display collectables.
+
+
+## Installation
+
+There is several options to install this package:
+- UPM
+- directly in manifest
+
+### Unity Package Manager
+
+Open Unity Package Manager and go to **Add package from git URL...** and paste [https://github.com/ostrzolekpawel/UnityCollectableHandler.git?path=Assets/CollectableHandler](https://github.com/ostrzolekpawel/UnityCollectableHandler.git?path=Assets/CollectableHandler)
+
+### Manifest
+Add link to package from repository directly to manifest.json
+
+**Example**
+```json
+{
+    "dependencies": {
+        // other packages
+        // ...
+        "com.osirisgames.collectablehandler": "https://github.com/ostrzolekpawel/UnityCollectableHandler.git?path=Assets/CollectableHandler"
+    }
+}
+```
 
 ## Implementation
 
