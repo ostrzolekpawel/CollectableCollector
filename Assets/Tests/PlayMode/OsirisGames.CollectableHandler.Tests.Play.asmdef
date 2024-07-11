@@ -1,15 +1,12 @@
 {
-    "name": "OsirisGames.CollectableCollector.Tests.Edit",
+    "name": "OsirisGames.CollectableHandler.Tests.Play",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "UniTask",
-        "OsirisGames.CollectableCollector.Core"
+        "OsirisGames.CollectableHandler.Core"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

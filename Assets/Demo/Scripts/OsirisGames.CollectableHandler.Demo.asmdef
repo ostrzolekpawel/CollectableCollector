@@ -1,8 +1,10 @@
 {
-    "name": "OsirisGames.CollectableCollector.Core",
+    "name": "OsirisGames.CollectableHandler.Demo",
     "rootNamespace": "",
     "references": [
-        "UniTask"
+        "OsirisGames.CollectableHandler.Core",
+        "UniTask",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
