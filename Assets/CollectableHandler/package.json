@@ -1,7 +1,7 @@
 {
-    "name": "com.osirisgames.collectablecollector",
-    "displayName": "Collectable Collector",
-    "version": "1.0.0",
+    "name": "com.osirisgames.collectablehandler",
+    "displayName": "Collectable Handler",
+    "version": "1.0.1",
     "description": "",
     "keywords": [],
     "category": "Tools",
